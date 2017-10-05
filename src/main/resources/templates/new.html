@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>RestTemplate Demo</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<h1>New</h1>
+
+<form action="#" th:action="@{/register}" th:object="${userdao}" method="post">
+    <p>User Name: <input type="text" th:field="*{username}"/></p>
+    <p>Real Name: <input type="text" th:field="*{realname}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>
