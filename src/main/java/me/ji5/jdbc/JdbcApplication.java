@@ -1,12 +1,11 @@
-package me.ji5.database;
+package me.ji5.jdbc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DatabaseApplication {
-
+public class JdbcApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(DatabaseApplication.class, args);
+		SpringApplication.run(JdbcApplication.class, args);
 	}
 }

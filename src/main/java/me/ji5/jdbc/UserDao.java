@@ -1,27 +1,17 @@
-package me.ji5.database;
+package me.ji5.jdbc;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 @Component
+@Repository
 public class UserDao {
     private String username;
     private String realname;
 
-    private final JdbcTemplate jdbc;
-
-    @Autowired
-    public UserDao(JdbcTemplate jdbc) {
-        this.jdbc = jdbc;
-    }
-
-    public UserDao() {
-        this.jdbc = null;
-    }
-
-    public void insertNewContent() {
-        jdbc.update("INSERT INTO tbl_demo(username, realname) VALUES(?, ?)", this.username, this.realname);
+    public void insertNewContent(JdbcTemplate jdbc) {
+        jdbc.update("INSERT INTO tbl_demo(username, realname) VALUES(?, ?)", username, realname);
     }
 
     public String getUsername() {
@@ -57,11 +47,11 @@ public class UserDao {
             return this;
         }
 
-        public UserDao build() {
-            UserDao userDao = new UserDao();
+        /*public UserDao build() {
+            UserDao userDao = new UserDao(null);
             userDao.setRealname(this.realname);
             userDao.setUsername(this.username);
             return userDao;
-        }
+        }*/
     }
 }

@@ -1,4 +1,4 @@
-package me.ji5.database;
+package me.ji5.jdbc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +12,7 @@ import java.sql.Connection;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DatabaseApplicationTests {
+public class JdbcApplicationTests {
     @Qualifier("dataSource")
     @Autowired
 	private DataSource ds; //작성

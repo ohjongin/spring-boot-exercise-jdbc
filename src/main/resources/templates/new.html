@@ -5,8 +5,13 @@
     <meta charset="utf-8"/>
 </head>
 <body>
-<h1>New</h1>
+<h1>New User</h1>
 
+<!--/* Workaround for bug https://youtrack.jetbrains.com/issue/IDEA-132738 -->
+<!--@thymesVar id="userdao" type=""-->
+<!--@thymesVar id="username" type=""-->
+<!--@thymesVar id="realname" type=""-->
+<!--*/-->
 <form action="#" th:action="@{/register}" th:object="${userdao}" method="post">
     <p>User Name: <input type="text" th:field="*{username}"/></p>
     <p>Real Name: <input type="text" th:field="*{realname}"/></p>
