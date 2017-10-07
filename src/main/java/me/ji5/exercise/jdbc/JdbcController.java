@@ -1,4 +1,4 @@
-package me.ji5.jdbc;
+package me.ji5.exercise.jdbc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

@@ -1,4 +1,4 @@
-package me.ji5.jdbc;
+package me.ji5.exercise.jdbc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
